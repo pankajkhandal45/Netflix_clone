@@ -28,29 +28,7 @@ body {
   z-index: 10;
 }
 
-.nav button {
-  width: 70px;
-  height: 30px;
-  font-size: 12px;
-  position: relative;
-  z-index: 10;
-  background-color: red;
-  color: white;
-}
 
-.nav select {
-  width: 130px;
-  height: 30px;
-  font-size: 15px;
-  background-color: transparent;
-  color: white;
-  border-radius: 5px;
-  text-align: center;
-  position: relative;
-  z-index: 10;
-}
-
-/* MAIN SECTION */
 .main {
   background-image: url(bg.jpg);
   background-position: center;
@@ -76,29 +54,53 @@ body {
   position: relative;
   z-index: 10;
   text-align: center;
-  height: calc(88%);
-  width: 90%;
-  padding: 100px 0 20px;
+  height: 80%; /* Removed calc() since it's not needed here */
+  width: 30%;
+  padding: 40px;
   margin: auto;
   display: flex;
   flex-direction: column;
   gap: 10px;
+  background-color: #0000009d;
+  text-align: center;
+  
 }
 
-.details h1 {
-  font-size: 50px;
-  font-weight: bold;
+/* Mobile-friendly styles */
+@media (max-width: 768px) {
+  .details {
+    width: 90%;
+    padding: 20px;
+    height: auto; /* Let it grow naturally */
+    font-size: 18px; /* Adjust text size for smaller screens */
+    gap: 10px;
+  }
 }
-
-.details h2 {
+.details input{
+  margin-left: 40px;
+  margin-right: 40px;
+  height: 50px;
+  font-size: 20px;
+  padding-left: 20px;
+  background-color: rgba(43, 42, 42, 0.759);
+  border: 1px solid white;
+  color: rgb(218, 30, 30);
+  border-radius: 5px;
+}
+.details button{
+  width: 100;
+  margin-left: 40px;
+  margin-right: 40px;
+  height: 50px;
+  background-color: red;
+  color: white;
   font-size: 18px;
-  line-height: 1.5;
+  border-radius: 5px;
 }
-
-.details h3 {
-  font-size: 16px;
-  font-weight: 300;
-  padding-top: 10px;
+.check{
+  /* border: 1px solid ; */
+  display: flex;
+  align-items: center;
 }
 
 /* SEARCH SECTION */
@@ -137,6 +139,7 @@ body {
 .saprate {
   height: 10px;
   background-color: pink;
+  margin-top: 60px;
 }
 
 .trand {
